@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  background-color: hsl(30deg, 38%, 92%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* =========================
+      |GENERAL STYLINGS|
+========================= */
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding-inline: 5%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+      |COMPOSITION|
+========================= */
+.flow > * {
+  margin-bottom: 1rem;
+}
+
+.flex-flow {
+  display: flex;
+  align-items: center;
+}
+
+.grid-flow {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* =========================
+      |UTILITY|
+========================= */
+.cl-gray {
+  color: hsl(228deg, 12%, 48%);
+  font-size: 1.2rem;
+}
+
+.fw-bold {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+/* =========================
+      |BLOCK|
+========================= */
+.container {
+  background-color: rgb(255, 255, 255);
+  max-width: 400px;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-direction: column;
+  margin: 2rem 1rem;
+}
+
+.card-info {
+  padding: clamp(2rem, 5vw, 3rem);
+}
+
+/* =========================
+      |EXCEPTION|
+========================= */
+/* CARD INFO*/
+.ct_info_sm h4 {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.ct_info_big h1 {
+  color: hsl(212deg, 21%, 14%);
+}
+
+.card__detail {
+  line-height: 1.7;
+  margin-bottom: 4.5rem;
+}
+.card__detail p {
+  font-weight: 500;
+}
+
+.card__price {
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.card__price .curr-price {
+  color: hsl(158deg, 36%, 37%);
+}
+
+.disp-price {
+  font-weight: 500;
+}
+
+.card__button {
+  background-color: hsl(158deg, 36%, 37%);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 1em;
+  border-radius: 0.5em;
+  font-weight: 700;
+  transition: background-color 0.35s ease-out;
+}
+.card__button:hover {
+  background-color: #142a22;
+}
+
+/* =========================
+      |MEDIA|
+========================= */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */

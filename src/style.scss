@@ -1,0 +1,114 @@
+@import 'config';
+@import 'variables';
+@mixin gray{
+      color: $Dark-grayish-blue;
+      font-size: $fs-400;
+}
+@mixin flex-flow{
+      display: flex;
+      align-items: center;
+}
+@mixin grid-flow($merg){
+      display: grid;
+      grid-template-columns: $merg;
+}
+/* =========================
+      |COMPOSITION|
+========================= */
+.flow > *{
+      margin-bottom: 1rem;
+}
+.flex-flow{
+      @include flex-flow;
+}
+.grid-flow{
+      @include grid-flow(1fr)
+}
+/* =========================
+      |UTILITY|
+========================= */
+
+.cl-gray{
+      @include gray;
+}
+// .ct_info_sm, 
+.fw-bold{
+      font-family: $ff-header;
+      font-weight: $fw-700;
+      font-size: $fs_700;
+}
+
+/* =========================
+      |BLOCK|
+========================= */
+.container{
+      background-color: $White;
+      max-width: 400px;
+      border-radius: 1rem;
+      overflow: hidden;
+      flex-direction: column;
+      margin: 2rem 1rem;
+}
+.card-info{
+      padding: clamp(2rem, 5vw, 3rem);
+}
+
+/* =========================
+      |EXCEPTION|
+========================= */
+
+
+/* CARD INFO*/
+.ct_info_sm{
+      h4{
+      font-weight: $fw-500;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      }
+}
+.ct_info_big{
+      h1{
+            color: $Very-dark-blue;
+      }
+}
+.card__detail{
+      line-height: 1.7;
+      margin-bottom: 4.5rem;
+      p{
+            font-weight: $fw-500;
+      }
+
+}
+.card__price {
+      gap: 2rem;
+      margin-bottom: 1.5rem;    
+      .curr-price{
+            color: $Dark-cyan;
+      }
+}
+.disp-price{
+      font-weight: $fw-500;
+}
+.card__button{
+      background-color: $Dark-cyan;
+      color: $White;
+      width: 100%;
+      justify-content: center;
+      gap: 1rem;
+      padding-block: 1em;
+      border-radius: .5em;
+      font-weight: $fw-700;
+      transition: background-color .35s ease-out;
+      &:hover{
+            background-color: darken($color: $Dark-cyan, $amount: 25);
+      }
+}
+/* =========================
+      |MEDIA|
+========================= */
+@media (min-width: 768px) {
+      .container{
+            max-width: 600px;
+            @include grid-flow(1fr 1fr)
+      }
+}
