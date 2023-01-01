@@ -24,8 +24,11 @@ Users should be able to:
 
 ### Screenshot
 
-![-desktop-preview](./images/product-card-desktop.png)
+### Mobile Preview
 ![-mobile-preview](./images/product-card-mobile.png)
+
+### Destop Preview
+![-desktop-preview](./images/product-card-desktop.png)
 
 
 ### Links
